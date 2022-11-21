@@ -1,0 +1,301 @@
+/** Vars for mobile **/
+:root {
+    --mobile-tab-font-size: 15pt;
+    --mobile-color: white;
+    --mobile-font-size: 14px;
+    --mobile-tab-bd-color: black;
+    --mobile-tab-clr: black;
+    --mobile-tab-bg: #e8eef0;
+    --bg: white;
+    --opacity: 0.9;
+}
+
+/**
+* HAPPYCUPCAKE
+**/
+/* Code color patch */
+code[class*="language-"] {
+    color: #333;
+}
+
+/* Shouts scrollbar patch by happycupcake, modified slightly */
+:where(.blog-shout-wrapper, .blog-tags-wrapper) .aops-scroll-outer>.aops-scroll-inner {
+    scrollbar-width: none;
+}
+
+:where(.blog-shout-wrapper, .blog-tags-wrapper) .aops-scroll-outer>.aops-scroll-inner::-webkit-scrollbar {
+    width: 0px;
+}
+
+/*  Feed username color patch  */
+.cmty-post .cmty-user-admin a,.cmty-post .cmty-user-admin:before{color: #009fad !important;}
+.cmty-forum-admin a{color: #900 !important;}
+.cmty-forum-mod a{color: #090 !important;}
+
+.month-image {
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='black' d='M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z' class=''%3E%3C/path%3E%3C/svg%3E") !important;
+    background-size: 16px 16px !important;
+    padding-left: 16px;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.1s;
+    transform: rotate(180deg);
+}
+.month-image[alt="+"] {
+    transition: transform 0.1s;
+    transform: rotate(90deg);
+}
+/** END **/
+
+/**
+* Search patch  
+* Code taken from AoPS user monks
+**/
+#search-widget > div {
+    background-color: transparent;
+}
+#search-widget fieldset {
+    border: none;
+}
+.widget-settings {
+    display: none;
+}
+.search {
+    height: 25px;
+    border-radius: 5px;
+}
+.button2 {
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    border: none;
+    background-color: #999;
+}
+/** END **/
+
+/**
+* My code
+**/
+
+/*  Image patch  */
+img#post-new-entry-img, div.entry h2 img, p.author img {
+  display: none;
+}
+
+/**  Widget title patch  **/
+div.widget-title {
+    font-size: 105%;
+}
+
+/**  Get rid of underlines  **/
+.blog-report-post, .blog-delete-post, .blog-edit-post, .blog-moderate-topic, a.post-comment, a.post-replies {
+    text-decoration: none !important;
+}
+
+/**    Entry patch    **/
+div.entry {
+  border: none;
+}
+
+/** Post button patch  **/
+#post-new-entry:before{
+    font-family: AoPS;
+    content: 'V ';
+}
+
+/* Seems to be in BobRascal's DIM, but it shows up everywhere now */
+#main{
+    width: calc(100% - 258px);
+    padding: 10px
+}
+
+#wrapper {
+    border-color: lightgray;
+    padding: 0;
+}
+
+#message, #side fieldset:not(#blog_searchform fieldset), div.entrywrap {
+    border: 1px solid #A9A9A9;
+}
+
+#message {
+    background-color: #fefefe;
+    padding: 5px;
+}
+
+/**  Make comment background transparent  **/
+.comment {
+    background-color: transparent;
+}
+
+/* Links */
+.bbcode_url:hover {
+    text-decoration: underline !important;
+}
+
+.blog-shout-wrapper .aops-scroll-content {
+    max-width: none !important;
+}
+
+.blog-shout {
+    margin-bottom: 10px;
+}
+
+.blog-shout-wrapper, #message {
+    width: 100%:
+}
+
+#shouts-widget ul {
+    margin-top: 0;
+}
+
+
+/* Modals */
+.aops-modal-frame:not(.cmty-posting-modal) {
+    border-color: white;
+}
+
+.aops-modal-frame:not(.cmty-posting-modal) .aops-scroll-outer {
+    box-shadow: none;
+}
+.aops-modal-content-wrapper {
+    box-shadow: none;
+}
+
+#navigation_box, #left_navigation_box, #right_navigation_box {
+    border-bottom: 1px solid #0e1525;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#left_navigation_box {
+    left: 0;
+    margin-left: 10px;
+}
+#right_navigation_box {
+    right: 0;
+    margin-right: 10px;
+}
+
+#navigation_box .clear {
+    display: none;
+}
+
+#navigation_box a {
+    white-space: nowrap;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#header {
+    line-height: normal;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px), (max-height: 480px) {
+    #right_navigation_box a.blog-info {display: inline-block !important;}
+}
+
+@media only screen and (max-width: 800px) {
+    #main {
+        width: 100%;
+        padding: 5px;
+        background-color: white;
+        background-color: var(--bg);
+    }
+    #content, #wrapper {width: 100%;}
+
+    #navigation_box {
+        height: 100vh;
+        width: 200px;
+        left: -200px;
+        top: 0px;
+        position: fixed;
+        transition: left 1s ease;
+        padding: 10px;
+        border: none;
+        display: flex;
+        z-index: 10000000;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #side {
+        height: 100vh;
+        top: 0;
+        left: -258px;
+        z-index: 9999999;
+        transition: left 1s ease;
+        overflow: auto;
+        position: fixed;
+        background-color: white;
+        background-color: var(--bg);
+    }
+    #navigation_box * {
+        font-size: 0;
+        position: static;
+    }
+    #navigation_box a {
+        font-size: 14px;
+        font-size: var(--mobile-font-size);
+        text-align: left;
+        width: 100%;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 20px;
+        margin: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+    #navigation_box:after,
+    #side:after {
+        cursor: pointer;
+        border-radius: 0px 50% 50% 0px;
+        font-size: 15pt;
+        font-size: var(--mobile-tab-font-size);
+        position: fixed;
+        left: 0;
+        transition: left 1s ease;
+        border: 1px solid black;
+        border: 1px solid var(--mobile-tab-bd-color);
+        color: black;
+        color: var(--mobile-tab-clr);
+        background-color: cornflowerblue;
+        background-color: var(--mobile-tab-bg);
+        opacity: 0.9;
+        opacity: var(--opacity);
+    }
+
+    #navigation_box:after {
+        top: 50px;
+        content: '☰';
+        padding: 13px;
+    }
+    #side:after {
+        top: 100px;
+        content: '»';
+        padding: 10px 15px;
+    }
+
+    #left_navigation_box, #right_navigation_box {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    #navigation_box:hover:after {
+        left: 200px;
+    }
+    #side:hover:after {
+        left: 258px;
+    }
+    #side:hover,
+    #navigation_box:hover {
+        left: 0;
+    }
+}
