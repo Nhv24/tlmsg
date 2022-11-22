@@ -92,10 +92,22 @@ div.widget-title {
     text-decoration: none !important;
 }
 
-/**    Entry patch    **/
+/**    Entry    **/
 div.entry {
-  border: none;
+    border: none;
 }
+
+body div.entrywrap {
+    background: none;
+    border: 0;
+}
+
+div.entry h1 {
+    padding: 0;
+}
+
+
+
 
 /** Post button patch  **/
 #post-new-entry:before{
@@ -112,6 +124,10 @@ div.entry {
 #wrapper {
     border-color: lightgray;
     padding: 0;
+    margin-top: 180px;
+    border: 0;
+    background-image: none;
+    padding-top: 20px;
 }
 
 #message, #side fieldset:not(#blog_searchform fieldset), div.entrywrap {
@@ -163,39 +179,59 @@ div.entry {
 }
 
 #navigation_box, #left_navigation_box, #right_navigation_box {
-    border-bottom: 1px solid #0e1525;
+    border: 0;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-#left_navigation_box {
-    left: 0;
-    margin-left: 10px;
-}
-#right_navigation_box {
-    right: 0;
-    margin-right: 10px;
+#navigation_box {
+    background: none;
+    position: absolute;
+    margin-top: 150px;
+    height: 30px;
+    padding-left: 10%;
 }
 
 #navigation_box .clear {
     display: none;
 }
 
+#navigation_box * {
+    font-size: 0 !important;
+}
+
 #navigation_box a {
     white-space: nowrap;
     padding-right: 5px;
     padding-left: 5px;
+    font-size: initial !important;
+    color: gray;
+    padding: 0;
+    padding-right: 10px;
 }
+
+
 
 #header {
     line-height: normal;
-    height: 2em;
+    height: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    border: 0;
+    padding-left: 10%;
+}
+
+#header h1 {
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
 }
 
 @media (max-width: 480px), (max-height: 480px) {
